@@ -1,1 +1,19 @@
-/* Add your own styles */
+.header{
+    font-family: "Bokor", system-ui;
+    color:white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color:#CD7F32;
+    font-size: 25px;
+}
+#atlas{
+    width: 168px;
+    height: 260px;
+}
+
+.main{
+    margin: 2%;
+    text-align: center;
+}

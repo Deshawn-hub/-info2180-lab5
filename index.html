@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bokor&family=Itim&display=swap" rel="stylesheet">
         <meta charset="utf-8">
 		<title>World Database Lookup</title>
 
@@ -12,15 +15,21 @@
 	</head>
 
 	<body>
-		<header>
+		<header class="header">
+			<img id="atlas" src="atlas-removebg-preview.png" alt="">
 			<h1>World Database Lookup</h1>
 		</header>
 
-		<main>
+		<main class="main">
 			<div id="controls">
-				<label for="country">Country:</label>
-				<input id="country" type="search" name="country" placeholder="Enter country name" />
-				<button id="lookup">Lookup</button>
+				<form action="world.php" method="GET">
+				<label for="country" >Country:</label>
+				<input style="border-radius: 30%; width: 300px; height: 30px;" id="country" type="search" name="country" placeholder="Enter country name" />
+				<br> 
+				<br>
+				<button id="lookup" type="submit">Lookup</button>
+				</form>
+				
 			</div>
 			
 			<div id="result">
