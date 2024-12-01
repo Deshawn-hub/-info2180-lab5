@@ -1,38 +1,57 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const $lookup = document.getElementById('lookup');
+document.addEventListener("DOMContentLoaded", () => {
+    // Select the button and input elements
+    const lookupButton = document.getElementById("lookup");
+    const countryInput = document.getElementById("country");
+    const resultDiv = document.getElementById("result");
+    const lookupButton2 = document.getElementById("lookup2");
 
-    $lookup.addEventListener('click', function(e){
-        e.preventDefault();
-        let url =`world.php?country=${country}`
-        let xhr = new XMLHttpRequest()
-        xhr.open('GET',url,true);
-       
+    lookupButton2.addEventListener{
+        
 
-        xhr.onload= function(){
-            if(xhr.status== 200){
-                console.log("Success")
-
-            //getting responsive from the json
-            const country = JSON.parse(xhr.responseText);
-
-            // Get the result div and display the data
-            const resultDiv = document.getElementById('result');
-            //clearing the div
-            resultDiv.innerHTML = '';
-            if (data.length > 0) {
-                data.forEach(country => {
-                    const countryInfo = `<p>${country.name} is ruled by ${country.head_of_state}</p>`;
-                    resultDiv.innerHTML += countryInfo;
-                });
-            } else {
-                resultDiv.innerHTML = 'No data found for the country.';
-            }
-
-            }
+    }
+  
+    // Add an event listener to the "Lookup" button
+    lookupButton.addEventListener("click", () => {
+        console.log('working')
+      // Get the country input value
+      const country = countryInput.value.trim();
+  
+      // Construct the URL with the query parameter
+      const url = `world.php?country=${encodeURIComponent(country)}`;
+  
+      // Create an AJAX request
+      const xhr = new XMLHttpRequest();
+      xhr.open("GET", url, true);
+  
+      // Define the callback function to handle the response
+      xhr.onload = function () {
+        if (xhr.status === 200) {
+          // Insert the response into the #result div
+          resultDiv.innerHTML = xhr.responseText;
+        } else {
+        
+          resultDiv.innerHTML = `<p>Error: Unable to fetch data</p>`;
         }
+      };
+  
+    
+      xhr.onerror = function () {
+        resultDiv.innerHTML = `<p>Network error occurred. Please try again.</p>`;
+      };
+  
+      
+
+      xhr.send();
+    });
+
+    lookupButton2.addEventListener('click',function(){
+        $co
+
+
     })
-    
 
-    
 
-});
+
+
+  });
+  

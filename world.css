@@ -14,6 +14,15 @@
 }
 
 .main{
+    display: flex;
     margin: 2%;
     text-align: center;
+    justify-content: center;  /* Aligns horizontally */
+  align-items: center;     
+}
+.styledtable{
+    width: 100%;           /* Makes the table take up the full width of its container */
+  border-collapse: collapse; /* Ensures table borders collapse into a single border */
+  margin: 20px 0;        /* Adds space above and below the table */
+  font-family: Arial, sans-serif;
 }

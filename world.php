@@ -7,6 +7,7 @@ $dbname = 'world';
 $conn = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $username, $password);
 $stmt = $conn->query("SELECT * FROM countries");
 
+
 $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 $country = '';
@@ -30,7 +31,7 @@ $stmt->execute();
 $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
-<table border="1">
+<table border="1" class="styledtable">
     <thead>
         <tr>
             <th>Country Name</th>
