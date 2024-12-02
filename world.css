@@ -1,3 +1,31 @@
+body{
+
+    margin: 0%;
+
+}
+
+table {
+    width: 100%;
+    height: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    color: #CD7F32;
+
+}
+th {
+    color: #f2f2f2;
+    background-color: gold;
+    padding: 8px;
+    text-align: left;
+}
+td {
+    padding: 8px;
+    text-align: left;
+}
+table, th, td {
+    border: 1px solid #ddd;
+}
+
 .header{
     font-family: "Bokor", system-ui;
     color:white;
@@ -15,14 +43,40 @@
 
 .main{
     display: flex;
+    align-items: center;
     margin: 2%;
-    text-align: center;
-    justify-content: center;  /* Aligns horizontally */
-  align-items: center;     
+    flex-direction: column;
+    gap: 20px;
+    font-family: "Bokor", system-ui;
+
+    
+    justify-content: center;
+      
+}
+
+#controls{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.btn{
+    border-radius: 10px;
+    background-color:#CD7F32 ;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-family: "Bokor", system-ui;
+    height: 38px;
+}
+
+button:hover{
+    background-color: #B66D28;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+
 }
 .styledtable{
-    width: 100%;           /* Makes the table take up the full width of its container */
-  border-collapse: collapse; /* Ensures table borders collapse into a single border */
-  margin: 20px 0;        /* Adds space above and below the table */
+    width: 100%;           
+  border-collapse: collapse; 
+  margin: 20px 0;      
   font-family: Arial, sans-serif;
 }
